@@ -158,6 +158,19 @@ const DashboardPage = () => {
       }));
 
     setNotifications(generatedNotifications);
+
+    const timer = setTimeout(() => {
+      setNotifications((prev) => [
+        ...prev,
+        {
+          title: "Cyclone Watch",
+          message: "Cyclonic storm approaching coastal region.",
+          time: new Date().toLocaleTimeString(),
+        },
+      ]);
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -259,7 +272,13 @@ const DashboardPage = () => {
                   >
                     {stat.value}
                   </p>
-                  <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
+                  <p
+                    style={{
+                      color: "#000",
+                      fontSize: "0.875rem",
+                      fontWeight: "600",
+                    }}
+                  >
                     {stat.label}
                   </p>
                 </div>

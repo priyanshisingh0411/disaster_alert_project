@@ -48,7 +48,12 @@ const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
       }}
     >
       <div>
-        <Image src={logo} alt="logo" width={200} />
+        <Image
+          onClick={() => router.push("/")}
+          src={logo}
+          alt="logo"
+          width={200}
+        />
       </div>
       {!isLoggedIn ? (
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
@@ -81,7 +86,8 @@ const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
               borderRadius: "6px",
               cursor: "pointer",
               fontWeight: "600",
-              backgroundColor: "#764ba2",
+              // backgroundColor: "#764ba2",
+              background: "rgb(165 153 153)",
             }}
           >
             Log In
@@ -101,7 +107,7 @@ const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
             }}
           >
             <CircleUser size={25} color="#000" />
-            <p style={{ color: "#000" }}>{username || "Guest"}</p>
+            <span style={{ color: "#000" }}>{username || "Guest"}</span>
 
             {/* <Users size={20} /> */}
           </div>
@@ -113,7 +119,10 @@ const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
               border: "1px solid #e5e7eb",
               borderRadius: "6px",
               cursor: "pointer",
-              backgroundColor: "#f87171",
+              fontWeight: "600",
+              color: "#ffffff",
+              // backgroundColor: "#f87171",
+              background: "rgb(165 153 153)",
             }}
           >
             Logout

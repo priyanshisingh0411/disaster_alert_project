@@ -172,7 +172,7 @@ const SignUpPage = () => {
               onClick={() => router.push("/dashboard")}
               style={{
                 padding: "1rem",
-                background: "#3b82f6",
+                background: "rgb(165 153 153)",
                 color: "#fff",
                 border: "none",
                 borderRadius: "6px",

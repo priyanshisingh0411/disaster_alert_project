@@ -23,7 +23,10 @@ const LoginPage = () => {
         localStorage.setItem("userRole", found.role || "user");
         localStorage.setItem("username", found.username || found.email || "");
         // also set currentUser for app state
-        localStorage.setItem("currentUser", found.username || found.email || "");
+        localStorage.setItem(
+          "currentUser",
+          found.username || found.email || ""
+        );
       } catch (e) {}
       if (found.role === "admin") router.push("/admin");
       else router.push("/dashboard");
@@ -134,7 +137,7 @@ const LoginPage = () => {
               onClick={handleLogin}
               style={{
                 padding: "1rem",
-                background: "#3b82f6",
+                background: "rgb(165 153 153)",
                 color: "#fff",
                 border: "none",
                 borderRadius: "6px",

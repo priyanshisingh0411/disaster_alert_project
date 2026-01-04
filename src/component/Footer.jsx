@@ -7,9 +7,9 @@ import Image from "next/image";
 const Footer = () => (
   <footer
     style={{
-      background: "#1f2937",
+      background: "#000",
       color: "#fff",
-      padding: "2rem",
+      padding: "1rem",
       marginTop: "auto",
     }}
   >

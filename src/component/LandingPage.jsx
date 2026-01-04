@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import { Map, Bell, AlertTriangle } from "lucide-react";
+import DarkVeil from "./ui/DarkVeil";
 const LandingPage = ({ currentPage, setCurrentPage }) => (
   <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
     <Navigation
@@ -13,14 +14,22 @@ const LandingPage = ({ currentPage, setCurrentPage }) => (
     <div
       style={{
         flex: 1,
-        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        width: "100%",
+        height: "600px",
+        position: "relative",
+        // background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
         padding: "4rem 2rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <div style={{ maxWidth: "800px", textAlign: "center", color: "#fff" }}>
+      <DarkVeil />
+
+      <div
+        className="darkveil-overlay"
+        style={{ maxWidth: "800px", textAlign: "center", color: "#fff" }}
+      >
         <h1
           style={{
             fontSize: "3rem",
@@ -41,12 +50,13 @@ const LandingPage = ({ currentPage, setCurrentPage }) => (
             style={{
               padding: "1rem 2.5rem",
               fontSize: "1.125rem",
-              background: "#dc2626",
+              background: "#a0a0a042",
               color: "#fff",
               border: "none",
               borderRadius: "8px",
               cursor: "pointer",
               fontWeight: "600",
+              border: "2px solid #fff",
             }}
           >
             Sign Up Free

@@ -224,12 +224,12 @@ const AboutPage = () => (
               <button
                 style={{
                   padding: "0.75rem 1.5rem",
-                  background: "#3b82f6",
+                  background: "rgb(165 153 153)",
                   color: "#fff",
+                  fontWeight: "600",
                   border: "none",
                   borderRadius: "6px",
                   cursor: "pointer",
-                  fontWeight: "500",
                 }}
               >
                 Send Message
