@@ -3,6 +3,8 @@ import Navigation from "./Navigation";
 import Sidebar from "./Sidebar";
 import { ChevronRight } from "react-feather";
 import Footer from "./Footer";
+import Image from "next/image";
+import logo from "../public/final.png";
 
 const AboutPage = () => (
   <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
@@ -27,9 +29,15 @@ const AboutPage = () => (
               fontWeight: "bold",
               marginBottom: "1rem",
               color: "#111827",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
             }}
           >
-            About DisasterWatch
+            About{" "}
+            <div>
+              <Image src={logo} alt="logo" width={200} />
+            </div>
           </h1>
 
           <div style={{ marginBottom: "2rem" }}>
