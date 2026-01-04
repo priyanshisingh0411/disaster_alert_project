@@ -80,7 +80,7 @@ const NotificationModal = ({ notifications, onClose }) => (
       ) : (
         notifications.map((n, index) => {
           return (
-            <>
+            <div key={index}>
               <div style={{ marginBottom: "1.5rem" }}>
                 <strong style={{ color: "#000", fontSize: "1rem" }}>
                   {n.title}
@@ -99,7 +99,7 @@ const NotificationModal = ({ notifications, onClose }) => (
                   {n.time}
                 </p>
               </div>
-            </>
+            </div>
           );
         })
       )}

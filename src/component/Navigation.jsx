@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { CircleUser, Users } from "lucide-react";
 import Link from "next/link";
 import { loginData } from "@/Data/login";
+import Image from "next/image";
+import logo from "../public/final.png";
 
 const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
   const router = useRouter();
@@ -45,8 +47,8 @@ const Navigation = ({ isLoggedIn, currentPage, setCurrentPage }) => {
         // position: "fixed",
       }}
     >
-      <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#dc2626" }}>
-        DisasterWatch
+      <div>
+        <Image src={logo} alt="logo" width={200} />
       </div>
       {!isLoggedIn ? (
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
